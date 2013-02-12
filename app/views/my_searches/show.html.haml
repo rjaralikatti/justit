@@ -1,0 +1,15 @@
+- title "My Search"
+
+%p
+  %strong Title:
+  = @my_search.title
+%p
+  %strong Times:
+  = @my_search.times
+
+%p
+  = link_to "Edit", edit_my_search_path(@my_search)
+  |
+  = link_to "Destroy", @my_search, :confirm => 'Are you sure?', :method => :delete
+  |
+  = link_to "View All", my_searches_path

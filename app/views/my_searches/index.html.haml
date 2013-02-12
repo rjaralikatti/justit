@@ -1,0 +1,15 @@
+- title "My Searches"
+
+%table
+  %tr
+    %th Title
+    %th Times
+  - for my_search in @my_searches
+    %tr
+      %td= my_search.title
+      %td= my_search.times
+      %td= link_to 'Show', my_search
+      %td= link_to 'Edit', edit_my_search_path(my_search)
+      %td= link_to 'Destroy', my_search, :confirm => 'Are you sure?', :method => :delete
+
+%p= link_to "New My Search", new_my_search_path
